@@ -25,5 +25,9 @@
 </template>
 
 <style lang="scss" scoped>
-
+  .card:hover{
+    scale: 150%;
+    transition: linear, 1s;
+    z-index: 999;
+  }
 </style>
