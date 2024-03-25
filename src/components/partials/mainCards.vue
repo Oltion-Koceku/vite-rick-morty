@@ -25,9 +25,20 @@
 </template>
 
 <style lang="scss" scoped>
-  .card:hover{
-    scale: 150%;
-    transition: linear, 1s;
-    z-index: 999;
+  .card{
+    background-color: rgba(0,0,0,0);
+    border: none;
+
+    &:hover{
+      scale: 150%;
+      transition: linear, 1s;
+      z-index: 999;
+    }
+    
+    img{
+      border-radius: 50%;
+    }
   }
+
+
 </style>
