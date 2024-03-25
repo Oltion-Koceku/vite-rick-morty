@@ -40,6 +40,10 @@ import  axios  from 'axios';
     <mainCards 
       :arrayApi = "this.store.apiArray"
     />
+
+    <div class="results text-center">
+      <h2>risultati trovati {{ this.store.apiArray.length }}</h2>
+    </div>
   </div>
 </template>
 
