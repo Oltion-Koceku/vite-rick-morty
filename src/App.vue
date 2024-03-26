@@ -6,7 +6,7 @@ import Footer from './components/Footer.vue'
     components:{
       Header,
       Main,
-      Footer
+      Footer,
     }
   }
 </script>

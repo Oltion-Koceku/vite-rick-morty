@@ -1,11 +1,22 @@
 <script>
+import axios from 'axios'
 import {store} from '../data/store'
+import SearchBar from './partials/SearchBar.vue'
   export default {  
     data(){
       return{
         store,
-        title: "-Rick & Morty-"
+        title: "-Rick & Morty-",
       }
+
+    },
+
+    methods:{
+      
+    },
+
+    components:{
+      SearchBar
     }
     
   }
@@ -19,7 +30,9 @@ import {store} from '../data/store'
     </div>
 
     <div class="menu d-flex justify-content-center">
-      <input type="text" placeholder="Search Character">
+      <SearchBar 
+      
+      />
       <select name="" id="">
         <option value="">Gino</option>
       </select>

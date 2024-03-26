@@ -11,8 +11,8 @@
 
 <template>
   
-    <div class="row row-cols-4 ">
-      <div v-for="api in arrayApi" :key="api.id" class="card m-2 text-center" style="width: 18rem;">
+    <div class="row row-cols-4 mt-5">
+      <div v-for="api in arrayApi" :key="api.id" class="card text-center" style="width: 18rem;">
         <img :src="api.image" class="card-img-top" :alt="api.name">
         <div class="card-body">
           <h5 class="card-title">{{api.name}}</h5>
@@ -28,6 +28,7 @@
   .card{
     background-color: rgba(0,0,0,0);
     border: none;
+    margin: 1.3rem;
 
     &:hover{
       scale: 150%;
@@ -37,6 +38,7 @@
     
     img{
       border-radius: 50%;
+      box-shadow: inset;
     }
   }
 

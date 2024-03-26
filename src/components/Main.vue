@@ -7,25 +7,31 @@ import  axios  from 'axios';
     data(){
       return{
         store,
-        axios
+        axios,
       }
     },
 
     methods:{
       apiCall(){
-        this.axios.get(this.store.apiURl)
+        this.axios.get(this.store.apiURl, {
+          params:{
+            name: this.store.nameApi
+          }
+        })
           .then(res  =>{
             this.store.apiArray = res.data.results
+
           })
 
           .catch(error =>{
-            console.log("ERRORRREEEEEEE");
+            error("errore")
           })
       }
     },
 
     mounted(){
       this.apiCall()
+      console.log( this.store.apiArray );
     },
 
     components:{
