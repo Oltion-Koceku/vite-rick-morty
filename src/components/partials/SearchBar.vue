@@ -24,7 +24,7 @@ import axios from 'axios'
           })
 
           .catch(error =>{
-            error("errore")
+            console.log("error");
           })
       }
     },

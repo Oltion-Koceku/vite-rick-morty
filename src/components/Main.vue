@@ -1,7 +1,9 @@
 <script>
 import {store} from '../data/store'
 import mainCards from './partials/mainCards.vue';
+import loader from './partials/loader.vue';
 import  axios  from 'axios';
+
 
   export default{
     data(){
@@ -35,15 +37,20 @@ import  axios  from 'axios';
     },
 
     components:{
-      mainCards
+      mainCards,
+      loader
     }
   }
 </script>
 
 
 <template>
-  <div class="container">
+  <div class="container ">
+    <div v-if="this.store.apiArray.length === 0" class="load">
+      <loader />
+    </div>
     <mainCards 
+      v-else
       :arrayApi = "this.store.apiArray"
     />
 
@@ -56,5 +63,9 @@ import  axios  from 'axios';
 
 
 <style lang="scss" scoped>
-
+  .load{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
 </style>
