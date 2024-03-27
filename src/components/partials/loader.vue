@@ -43,7 +43,7 @@
 }
 .loader::after {
   font-size: 1px;
-  background: #fff;
+  background: #000000;
   animation: bounce 1s ease-in infinite;
 }
 

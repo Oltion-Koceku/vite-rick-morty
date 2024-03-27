@@ -26,14 +26,13 @@ import  axios  from 'axios';
           })
 
           .catch(error =>{
-            error("errore")
+            console.log("error");
           })
       }
     },
 
     mounted(){
-      this.apiCall()
-      console.log( this.store.apiArray );
+      this.apiCall();
     },
 
     components:{

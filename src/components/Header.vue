@@ -2,6 +2,7 @@
 import axios from 'axios'
 import {store} from '../data/store'
 import SearchBar from './partials/SearchBar.vue'
+import status from './partials/status.vue';
   export default {  
     data(){
       return{
@@ -12,11 +13,14 @@ import SearchBar from './partials/SearchBar.vue'
     },
 
     methods:{
-      
+      allSpecies(){
+        
+      }
     },
 
     components:{
-      SearchBar
+      SearchBar,
+      status
     }
     
   }
@@ -31,11 +35,9 @@ import SearchBar from './partials/SearchBar.vue'
 
     <div class="menu d-flex justify-content-center">
       <SearchBar 
-      
+        
       />
-      <select name="" id="">
-        <option value="">Gino</option>
-      </select>
+      <status />
       <button class="btn btn-info ">Search</button>
       <button class="btn btn-danger"> Reset</button>
     </div>
