@@ -30,7 +30,7 @@ import axios from 'axios'
     },
 
     mounted(){
-      this.searchApi()
+      
     }
   }
 </script>

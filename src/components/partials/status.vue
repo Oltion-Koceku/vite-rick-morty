@@ -31,6 +31,7 @@ import axios from 'axios';
       },
 
       statuSelect(status){
+        this.store.status = ''
         this.store.status = status
         console.log(this.store.status);
       }
@@ -45,6 +46,7 @@ import axios from 'axios';
 
 <template>
   <select name="" id="">
+      <option @click="statuSelect(status)" value="selected" selected>Scegli lo status</option>
         <option @click="statuSelect(status)" v-for="(status, index) in this.store.statusArray" :key="index"  value="">{{status}}</option>
   </select>
 </template>

@@ -3,6 +3,7 @@ import {store} from '../data/store'
 import mainCards from './partials/mainCards.vue';
 import loader from './partials/loader.vue';
 import  axios  from 'axios';
+import paginator from './partials/paginator.vue';
 
 
   export default{
@@ -17,7 +18,8 @@ import  axios  from 'axios';
       apiCall(){
         this.axios.get(this.store.apiURl, {
           params:{
-            name: this.store.nameApi
+            name: this.store.nameApi,
+            page: this.store.page
           }
         })
           .then(res  =>{
@@ -37,7 +39,8 @@ import  axios  from 'axios';
 
     components:{
       mainCards,
-      loader
+      loader,
+      paginator
     }
   }
 </script>
@@ -53,8 +56,9 @@ import  axios  from 'axios';
       :arrayApi = "this.store.apiArray"
     />
 
-    <div class="results text-center">
+    <div class="results d-flex justify-content-center">
       <h2>risultati trovati {{ this.store.apiArray.length }}</h2>
+      <paginator />
     </div>
   </div>
 </template>
